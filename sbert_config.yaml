@@ -1,0 +1,17 @@
+base_model: "klue/bert-base"
+
+train_csv: "NLP_dataset/train.csv" # train.csv 경로
+valid_csv: "NLP_dataset/dev.csv"   # valid.csv 경로
+
+train_x_dir: "NLP_dataset/klue/bert-base/train_x.npy" # train 문장 데이터 저장 경로
+train_y_dir: "NLP_dataset/klue/bert-base/train_y.npy" # train 라벨 데이터 저장 경로
+valid_x_dir: "NLP_dataset/klue/bert-base/valid_x.npy" # valid 문장 데이터 저장 경로
+valid_y_dir: "NLP_dataset/klue/bert-base/valid_y.npy" # valid 라벨 데이터 저장 경로
+
+epochs: 10
+batch_size: 64
+lr: .1e-7
+
+log_name: "with bucketing" # wandb에 logging할 이름.
+model_load_path: None # 학습을 이어서 하고자 할 때 경로 지정.
+model_save_path: "results/bert-base.pt" # 학습 완료된 모델을 해당 경로에 저장.(아직 best model 저장 등은 구현 안됨.)
