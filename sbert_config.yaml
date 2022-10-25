@@ -1,3 +1,7 @@
+# klue/bert-base, klue/roberta-large, monologg/koelectra-base-discriminator, 
+# monologg/koelectra-base-v2-discriminator, monologg/koelectra-base-v3-discriminator
+test_mode: False
+
 base_model: "klue/bert-base"
 
 train_csv: "NLP_dataset/train.csv" # train.csv 경로
@@ -12,6 +16,6 @@ epochs: 10
 batch_size: 64
 lr: .1e-7
 
-log_name: "with bucketing" # wandb에 logging할 이름.
+log_name: "bert-base(mean-pooler)" # wandb에 logging할 이름.
 model_load_path: None # 학습을 이어서 하고자 할 때 경로 지정.
-model_save_path: "results/bert-base.pt" # 학습 완료된 모델을 해당 경로에 저장.(아직 best model 저장 등은 구현 안됨.)
+model_save_path: "results/bert_base.pt" # 학습 완료된 모델을 해당 경로에 저장.(아직 best model 저장 등은 구현 안됨.)

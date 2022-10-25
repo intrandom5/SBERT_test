@@ -1,1 +1,1 @@
-from .auto_models import SBERT_with_KLUE_BERT
+from .auto_models import SBERT_with_KLUE_BERT, SBERT_with_KOELECTRA_BASE, SBERT_with_ROBERTA_LARGE
